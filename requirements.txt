@@ -7,3 +7,4 @@ eventlet
 gunicorn
 python-dotenv
 Flask-Mail
+cs50
