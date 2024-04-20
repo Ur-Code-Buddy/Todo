@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %} Welcome to Todo App {% endblock %}
+{% block main %}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Welcome to Todo App</h2>
+      <p>
+        Manage your tasks efficiently with our Todo App. Stay organized,
+        prioritize your tasks, and never miss a deadline again!
+      </p>
+    </div>
+    <div class="col-md-6">
+      <a href="#">
+        <img
+          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dwidth=1200&height=900"
+          class="img-fluid"
+          alt="Todo App Image"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <a href="/todos">
+        <img
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="img-fluid"
+          alt="Clickable Image 2"
+        />
+      </a>
+    </div>
+    <div class="col-md-6">
+      <h3>Manage Your Tasks</h3>
+      <p>
+        Stay on top of your tasks and keep track of your progress with our Todo
+        App. Organize tasks by priority, set deadlines, and mark them as
+        completed.
+      </p>
+      <div>
+        <p>Start managing your tasks now!</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

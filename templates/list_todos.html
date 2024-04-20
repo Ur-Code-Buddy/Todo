@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %} | List Todos {% endblock %}
+{% block main %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h3 class="mb-3">Current Todos</h3>
+      <ul class="list-group">
+        {% for todo in current_todos %}
+        <li class="list-group-item">{{ todo.todo_item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="mb-3">Overdue Todos</h3>
+      <ul class="list-group">
+        {% for todo in overdue_todos %}we 
+        <li class="list-group-item">{{ todo.todo_item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="mb-3">Completed Todos</h3>
+      <ul class="list-group">
+        {% for todo in completed_todos %}
+        <li class="list-group-item">{{ todo.todo_item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

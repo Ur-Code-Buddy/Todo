@@ -1,0 +1,72 @@
+{% extends "layout.html" %} {% block title %} | Todos {% endblock %} {% block
+main %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h2 class="mb-4">Todo List</h2>
+
+      <!-- Display current todos -->
+      <ul class="list-group mb-4">
+        {% for todo in todos %} {% if not todo.completed %}
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>{{ todo.todo_item }}</span>
+          <div class="d-flex align-items-center">
+            <span class="badge bg-primary small">{{ todo.deadline_date }}</span>
+            <form
+              action="/mark_completed/{{ todo.id }}"
+              method="post"
+              class="ms-2"
+            >
+              <button type="submit" class="btn btn-success btn-sm me-1">
+                Complete
+              </button>
+            </form>
+            <form action="/delete_todo/{{ todo.id }}" method="post">
+              <button type="submit" class="btn btn-danger btn-sm">
+                Delete
+              </button>
+            </form>
+          </div>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
+
+      <!-- Add new todo form -->
+      <form action="/add_todo" method="post">
+        <div
+          class="mb-3"
+          style="
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 8px;
+            background-color: #ffd6d6;
+          "
+        >
+          <label for="todo_item" class="form-label">New Todo Item</label>
+          <input
+            type="text"
+            class="form-control"
+            id="todo_item"
+            name="todo_item"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="deadline_date" class="form-label">Deadline Date</label>
+          <input
+            type="date"
+            class="form-control date-input"
+            id="deadline_date"
+            name="deadline_date"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Todo</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

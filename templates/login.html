@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <main class="form-signin w-100 m-auto">
+        <form action="/login" method="post">
+            <img class="mb-4" src="https://st2.depositphotos.com/22052918/47547/v/450/depositphotos_475477098-stock-illustration-letter-simple-geometric-linear-logo.jpg"alt="Logo" width="85" height="70" />
+            <h2 class="h3 mb-3 fw-normal">Please sign in</h2>
+
+            <div class="form-floating">
+                <input autocomplete="off" autofocus type="text" class="form-control" id="username" name="username" placeholder="Enter username or email" />
+                <label for="floatingInput">Username or Email</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-body-secondary">&copy;2024</p>
+        </form>
+    </main>
+{% endblock %}

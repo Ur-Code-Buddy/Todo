@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block title %}Update Todo{% endblock %} {% block
+main %}
+<div class="container mt-5">
+  <h2 class="mb-4">Update Todo</h2>
+  <form action="/update_todo/{{ todo.id }}" method="post">
+    <div class="mb-3">
+      <label for="updated_todo_item" class="form-label"
+        >Updated Todo Item</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="updated_todo_item"
+        name="updated_todo_item"
+        value="{{ todo.todo_item }}"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="updated_deadline_date" class="form-label"
+        >Updated Deadline Date</label
+      >
+      <input
+        type="date"
+        class="form-control"
+        id="updated_deadline_date"
+        name="updated_deadline_date"
+        value="{{ todo.deadline_date }}"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Update Todo</button>
+  </form>
+</div>
+{% endblock %}
