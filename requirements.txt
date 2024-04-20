@@ -3,7 +3,7 @@ Jinja2
 Flask-Session
 Flask-SocketIO
 Werkzeug
-cs50
 eventlet
 gunicorn
 python-dotenv
+Flask-Mail
