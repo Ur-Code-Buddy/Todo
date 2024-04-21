@@ -15,7 +15,7 @@ This Flask application, named TodoList, is designed to provide users with a plat
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/Ur-Code-Buddy/todo)
 
 2. Install dependencies:
    ```bash
