@@ -15,7 +15,8 @@ This Flask application, named TodoList, is designed to provide users with a plat
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone [<repository_url>](https://github.com/Ur-Code-Buddy/todo)
+   git clone https://github.com/Ur-Code-Buddy/todo
+
 
 2. Install dependencies:
    ```bash
@@ -59,10 +60,6 @@ The SQLite database (`users.db`) consists of the following tables:
 ## Styling
 The application uses Bootstrap for responsive design and layout. Custom CSS is also utilized for additional styling and customization.
 
-## Contributing
-Contributions are welcome! Please feel free to submit pull requests or open issues for any improvements or bug fixes.
 
-## License
-This project is licensed under the MIT License.
 
 
